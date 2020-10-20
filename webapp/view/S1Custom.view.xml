@@ -1,0 +1,30 @@
+<!--
+
+    Copyright (C) 2009-2018 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:View height="100%" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:smartTable="sap.ui.comp.smarttable"
+	controllerName="query.viewbrowser.s1.controller.S1" xmlns:l="sap.ui.layout">
+	<Page class="sapUiFioriObjectPage" navButtonPress="onNavBack" title="{i18n>FULLSCREEN_TITLE}" showNavButton="true" showHeader="false">
+		<content>
+			<IconTabBar id="VB_ICONTABBAR" expandable="false" class="sapUiNoContentPadding" select="_handleIconTabBarSelect">
+				<items>
+					<IconTabFilter id="VB_ALLVIEWS" text="{i18n>XTIT_ALL_VIEWS}" key="ALLVIEWS" showAll="true" design="Horizontal"/>
+					<IconTabSeparator/>
+					<IconTabFilter id="VB_BASIC_VIEWS" text="{i18n>XTIT_BASIC_VIEWS}" key="BASIC" icon="sap-icon://document-text" design="Horizontal"/>
+					<IconTabFilter id="VB_COMPOSITE_VIEWS" text="{i18n>XTIT_COMPOSITE_VIEWS}" key="COMPOSITE" icon="sap-icon://documents" design="Horizontal"/>
+					<IconTabFilter id="VB_CONSUMPTION_VIEWS" text="{i18n>XTIT_CONSUMPTION_VIEWS}" key="CONSUMPTION" icon="sap-icon://unlocked"
+						design="Horizontal"/>
+					<IconTabFilter id="VB_EXTENSION_VIEWS" text="{i18n>XTIT_EXTENSION_VIEWS}" key="EXTENSION" icon="sap-icon://add-document" design="Horizontal"/>
+					<IconTabFilter id="VB_NA_VIEWS" text="{i18n>XTIT_UNDEFINED_VIEWS}" key="NA" icon="sap-icon://question-mark" design="Horizontal"/>
+				</items>
+			</IconTabBar>
+		</content>
+		<footer>
+			<Toolbar>
+				<ToolbarSpacer/>
+				<Button text="doSomething"/>
+			</Toolbar>
+		</footer>
+	</Page>
+</core:View>
